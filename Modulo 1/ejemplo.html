@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<script>
+  const precioBase = parseFloat(prompt("Precio base del producto:"));
+  const impuesto = parseFloat(prompt("Impuesto (%):"));
+  const descuento = parseFloat(prompt("Descuento (%):"));
+
+  const total = (precioBase * (1 - descuento/100)) * (1 + impuesto/100);
+  alert(`Total a pagar: $${total.toFixed(2)}`);
+</script>

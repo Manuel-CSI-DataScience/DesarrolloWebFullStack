@@ -1,0 +1,33 @@
+// Algoritmo para calcular costo total de un producto con impuestos y descuentos
+
+INICIO
+    // Paso 1: Pedir al usuario los datos necesarios
+    MOSTRAR "Ingrese el precio base del producto:"
+    LEER precio_base
+    
+    MOSTRAR "Ingrese el porcentaje de impuesto (ej. 15 para 15%):"
+    LEER porcentaje_impuesto
+    
+    MOSTRAR "Ingrese el porcentaje de descuento (ej. 10 para 10%):"
+    LEER porcentaje_descuento
+    
+    // Paso 2: Calcular el monto del descuento
+    descuento = precio_base * (porcentaje_descuento / 100)
+    
+    // Paso 3: Calcular el precio con descuento
+    precio_con_descuento = precio_base - descuento
+    
+    // Paso 4: Calcular el monto de impuestos
+    impuestos = precio_con_descuento * (porcentaje_impuesto / 100)
+    
+    // Paso 5: Calcular el precio final
+    precio_final = precio_con_descuento + impuestos
+    
+    // Paso 6: Mostrar los resultados al usuario
+    MOSTRAR "Desglose de costos:"
+    MOSTRAR "Precio base: " + precio_base
+    MOSTRAR "Descuento (" + porcentaje_descuento + "%): " + descuento
+    MOSTRAR "Precio con descuento: " + precio_con_descuento
+    MOSTRAR "Impuestos (" + porcentaje_impuesto + "%): " + impuestos
+    MOSTRAR "Precio final a pagar: " + precio_final
+FIN

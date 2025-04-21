@@ -1,0 +1,186 @@
+Explicacion código HTML 
+Explicación: Barra de navegación responsive que se colapsa en dispositivos pequeños.
+navbar-expand-lg: Se expande en pantallas grandes (lg)
+ms-auto: Alinea los items a la derecha
+data-bs-toggle="collapse": Funcionalidad para mostrar/ocultar en móviles
+
+Sección Hero (Cabecera)
+Explicación de <section class="hero">
+Esta es una sección especial del sitio web diseñada para crear un impacto visual fuerte, típicamente ubicada al inicio de la página. Vamos a desglosar su significado y función:
+
+Definición
+<section>: Es un elemento HTML5 que define una sección temática del documento.
+
+class="hero": Es una clase CSS que aplica estilos específicos a esta sección.
+
+Características principales
+Imagen de fondo a pantalla completa: Usa una imagen grande como fondo.
+
+Contenido centrado: Muestra texto y botones superpuestos sobre la imagen.
+
+Overlay oscuro: Tiene una capa semitransparente para mejorar la legibilidad del texto.
+
+Propósito
+Primera impresión: Es lo primero que ven los visitantes.
+
+Llamado a la acción: Suele incluir un botón importante (como "Ver Menú").
+
+Estética profesional: Crea una apariencia moderna y atractiva.
+CSS asociado (lo que hace posible el efecto)
+.hero {
+    background: url('imagen-cafe.jpg') no-repeat center center;
+    background-size: cover;  /* Cubre todo el espacio */
+    height: 60vh;           /* 60% del alto de la pantalla */
+    display: flex;
+    align-items: center;     /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Capa oscura semitransparente */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;  /* Asegura que el texto esté sobre el overlay */
+    color: white; /* Texto blanco para contraste */
+    text-align: center;
+}
+
+El término viene del inglés "hero image" (imagen heroica), que en diseño web se refiere a:
+
+La imagen principal de una página
+
+Gran tamaño
+
+Alto impacto visual
+
+Suele contener el mensaje principal
+
+Estilos CSS asociados:
+Explicación: Sección con imagen de fondo y texto superpuesto. El pseudo-elemento ::before crea un overlay oscuro para mejorar la legibilidad del texto.
+
+Elementos HTML: nav, div, span, ul, li
+1. <nav> (Elemento de Navegación)
+Significado: Navigation (Navegación)
+Función:
+
+Define una sección de navegación (menús principales, links importantes)
+
+Usado típicamente para barras de navegación, menús o índices
+
+Ejemplo en tu código:
+
+html
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- Contenido del menú de navegación -->
+</nav>
+Características:
+
+Semántico (indica su propósito a navegadores y motores de búsqueda)
+
+Mejora la accesibilidad
+
+Puede contener listas (<ul>, <ol>) o links (<a>)
+
+2. <div> (División)
+Significado: Division (División)
+Función:
+
+Contenedor genérico para agrupar elementos
+
+No tiene significado semántico
+
+Se usa para aplicar estilos CSS o manipular con JavaScript
+
+Ejemplo en tu código:
+
+html
+<div class="container">
+    <!-- Contenido agrupado -->
+</div>
+Características:
+
+Es el elemento más usado en HTML
+
+Se comporta como bloque (ocupa todo el ancho disponible)
+
+Su funcionalidad depende completamente de sus clases/atributos
+
+3. <span> (Span/Extensión)
+Significado: Span (Amplitud o Extensión)
+Función:
+
+Contenedor en línea para texto o elementos inline
+
+Similar a <div> pero para pequeñas porciones de contenido
+
+Ejemplo típico (no aparece en tu código pero es común):
+
+html
+<p>Precio: <span class="precio">$2.50</span></p>
+Características:
+
+No fuerza saltos de línea (es inline)
+
+Ideal para aplicar estilos a partes de texto
+
+También usado para manipular texto con JavaScript
+
+4. <ul> (Lista Desordenada)
+Significado: Unordered List (Lista Desordenada)
+Función:
+
+Crea listas donde el orden no es importante (con viñetas)
+
+Debe contener elementos <li>
+
+Ejemplo en tu código:
+
+html
+<ul class="navbar-nav ms-auto">
+    <li class="nav-item"><a href="#">Inicio</a></li>
+    <li class="nav-item"><a href="#menu">Menú</a></li>
+</ul>
+Características:
+
+Por defecto muestra viñetas (pueden removerse con CSS)
+
+Alternativa ordenada: <ol> (con números)
+
+Fundamental para menús de navegación
+
+5. <li> (Elemento de Lista)
+Significado: List Item (Ítem de Lista)
+Función:
+
+Representa un ítem dentro de una lista (<ul> o <ol>)
+
+Ejemplo en tu código:
+
+html
+<li class="nav-item">
+    <a class="nav-link" href="#menu">Menú</a>
+</li>
+Características:
+
+Siempre debe estar dentro de <ul> o <ol>
+
+Puede contener cualquier otro elemento HTML
+
+Esencial para estructurar menús y listas de contenido
+
+Comparativa Visual
+Elemento	Tipo	Uso Principal	Ejemplo Común
+<nav>	Semántico	Menús de navegación	Barras de navegación
+<div>	Contenedor	Agrupación genérica	Secciones, layouts
+<span>	Inline	Estilos en porciones de texto	Resaltar palabras
+<ul>	Lista	Listas desordenadas	Menús, listas de features
+<li>	Ítem	Elementos individuales en listas	Ítems de menú, listas
